@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -27,11 +27,24 @@ const DateTime = () => {
     }, [])
     return (
         <View>
-            <Text>{time}</Text>
-            <Text>{date}</Text>
+            <Text style={styles.time}>{time}</Text>
+            <Text style={styles.date}>{date}</Text>
         </View>
     )
 }
 
+const styles = StyleSheet.create({
+    time: {
+        fontSize: 45,
+        color: 'white',
+        fontWeight: '300'
+    },
+
+    date: {
+        fontSize: 25,
+        color: 'white',
+        fontWeight: '300'
+    },
+})
 
 export default DateTime

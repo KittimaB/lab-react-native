@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import DateTime from './DateTime';
 import Forecast from './Forecast';
 
 export default function Weather(props) {
@@ -31,6 +32,7 @@ export default function Weather(props) {
             <View style={styles.bg}>
                 <Text style={styles.place}>{props.place}</Text>
                 <Text style={styles.zipCode}>Zip code is {props.zipCode}. </Text>
+                <DateTime></DateTime>
                 <Forecast {...forecastInfo} />
             </View>
             
